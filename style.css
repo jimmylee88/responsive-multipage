@@ -1,16 +1,39 @@
+header {
+    display: flex;
+    flex-direction: row;
+}
+
 .nav-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    margin: 16px 16px;
+    padding: 8px;
     gap: 16px;
     list-style: none;
+    justify-content: space-around;
 }
 
-.nav-list li {
-    flex-grow: 1;
-    flex-shrink: 1;
+.nav-list li a {
+    flex: 0 1 200px ;
+    /* aquamarine bg is just a placeholder to test out flexbox */
     background-color: aquamarine;
-    padding: 8px;
+    color:black;
+    padding: 8px 8px;
     text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    color:blue ;
+}
+
+/* Becky McG logo image on left of header */
+#logo {
+    width: 200px;
+    padding: 8px;
 }
