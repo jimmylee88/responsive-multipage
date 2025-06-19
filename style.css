@@ -1,8 +1,59 @@
+/*CSS variables*/
+
+:root {
+    --primary-color: #2F5BB6;
+    --secondary-color: #fdf954;
+    --bg-white: white;
+    --bg-grey: #f2f5fa;
+    --text-color: #000000;
+    --brand-font: "Bebas Neue";
+}
+
+body {
+    background-color: var(--bg-white);
+}
+
+h1{
+font-family: var(--brand-font);
+font-size: 96px;
+color:var(--primary-color);
+letter-spacing: -1px;
+/* negative letter spacing for tighter kerning at bigger font sizes*/
+}
+
+h2{
+font-family: var(--brand-font);
+font-size: 64px;
+color:var(--text-color);
+}
+
+/*  */
 header {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-white);
 }
 
+a {
+    color: black;
+}
+
+/* Using flexbox for the header keeps the logo in line with the nav links*/
+/* Becky McG logo image on left of header */
+#logo {
+    width: 160px;
+    height: 104px;
+    padding: 16px;
+}
+
+#logo:hover {
+    scale: 1.10;
+    transform: rotate(-20deg);
+}
+
+/* Links for the nav */
 .nav-list {
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +68,7 @@ header {
 .nav-list li a {
     flex: 0 1 200px ;
     /* aquamarine bg is just a placeholder to test out flexbox */
-    background-color: aquamarine;
+   /* background-color: aquamarine; */
     color:black;
     padding: 8px 8px;
     text-align: center;
@@ -29,11 +80,58 @@ header {
 }
 
 .nav-list li a:hover {
-    color:blue ;
+    color: var(--primary-color);
+    border-bottom: 4px solid #2F5BB6;
 }
 
-/* Becky McG logo image on left of header */
-#logo {
-    width: 200px;
-    padding: 8px;
+.nav-list li a:active {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* Instagram icon */
+i {
+    padding-right: 32px;
+}
+
+/* links & hover states */
+a:hover {
+    color: var(--primary-color);
+}
+
+a:active {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+i:hover {
+    scale: 1.10;
+}
+
+i:active {
+    scale: 0.95;
+}
+/* Hero image for the intro section */
+#intro{
+    background-color: var(--bg-grey);
+    background-image: url(images/about.jpg);
+    background-repeat: no-repeat;
+    height: 600px;
+    background-position-y: 25%;
+    background-size: cover;
+    padding: 24px;
+}
+
+#intro h1 {
+    color:var(--primary-color);
+    position: relative;
+    top: 18%;
+    font-size: 200px;
+    letter-spacing: -3px;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 24px;
 }
