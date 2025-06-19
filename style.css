@@ -13,9 +13,8 @@
 body {
     background-color: var(--bg-white); 
     /* had to include this as a weird 8px margin seems to be applied by default by browsers */
-    margin: 0;
-    padding: 16px;
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -31,6 +30,7 @@ hr {
 
 h1{
 font-family: var(--brand-font);
+font-weight: 500;
 font-size: 80px;
 color:var(--primary-color);
 /* negative letter spacing for tighter kerning at bigger font sizes*/
@@ -41,6 +41,7 @@ margin: 0 16px 8px 0;
 h2{
 font-family: var(--brand-font);
 font-size: 64px;
+font-weight: 500;
 color:var(--text-color);
 }
 
@@ -92,7 +93,7 @@ a:hover {
     color:black;
     text-align: center;
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: "Bebas Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -168,23 +169,17 @@ i:active {
 
 #about {
     padding: 16px 42px;
+}
 
+.profile {
     display: flex;
     flex-flow: row wrap;
-
-    align-items: center;
+    align-items: flex-start;
     align-content: center;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 
-
-#about h1 p {
-    flex-wrap: 0 0 100px;
-}
-
-#about img {
-    flex: 0 0 100px;
-
+#about img{
     border-radius: 200px;
     max-width: 400px;
     max-height: 400px;
