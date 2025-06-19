@@ -10,7 +10,9 @@
 }
 
 body {
-    background-color: var(--bg-white);
+    background-color: var(--bg-white); 
+    /* had to include this as a weird 8px margin seems to be applied by default by browsers */
+    margin: 0 auto;
 }
 
 h1{
@@ -60,7 +62,7 @@ a {
     align-items: center;
     margin: 16px 16px;
     padding: 8px;
-    gap: 16px;
+    gap: 16px 24px;
     list-style: none;
     justify-content: space-around;
 }
@@ -70,7 +72,6 @@ a {
     /* aquamarine bg is just a placeholder to test out flexbox */
    /* background-color: aquamarine; */
     color:black;
-    padding: 8px 8px;
     text-align: center;
     font-size: 40px;
     font-weight: 900;
@@ -88,11 +89,6 @@ a {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border-bottom: 4px solid var(--primary-color);
-}
-
-/* Instagram icon */
-i {
-    padding-right: 32px;
 }
 
 /* links & hover states */
@@ -113,7 +109,7 @@ i:active {
     scale: 0.95;
 }
 /* Hero image for the intro section */
-#intro{
+#hero{
     background-color: var(--bg-grey);
     background-image: url(images/about.jpg);
     background-repeat: no-repeat;
@@ -121,14 +117,30 @@ i:active {
     background-position-y: 25%;
     background-size: cover;
     padding: 24px;
+    margin-bottom: 32px;
 }
 
-#intro h1 {
-    color:var(--primary-color);
+/* could really do with using media queries to adjust the scaling of this */
+#hero h1 {
+    color:var(--secondary-color);
     position: relative;
-    top: 18%;
-    font-size: 200px;
-    letter-spacing: -3px;
+    top: 30%;
+    left: 25%;
+    font-size: 10rem;
+    letter-spacing: -1px;
+    line-height:8rem;
+    margin-bottom:6rem;
+    margin-right: 24px;
+}
+
+#hero h2 {
+    background-color:var(--secondary-color);
+    padding: 16px;
+    width:max-content;
+    position: relative;
+    top: 24px;
+    margin-top: 8rem;
+    font-size: 3rem;
 }
 
 footer {
