@@ -7,20 +7,33 @@
     --bg-grey: #f2f5fa;
     --text-color: #000000;
     --brand-font: "Bebas Neue";
+
 }
 
 body {
     background-color: var(--bg-white); 
     /* had to include this as a weird 8px margin seems to be applied by default by browsers */
-    margin: 0 auto;
+    margin: 0;
+    padding: 16px;
+}
+
+hr {
+    margin: 0;
+    width:80px;
+    align: left;
+    border-width:4px;
+    border-style:solid;
+    color: var(--secondary-color);
+    text-align: left;
 }
 
 h1{
 font-family: var(--brand-font);
 font-size: 96px;
 color:var(--primary-color);
-letter-spacing: -1px;
 /* negative letter spacing for tighter kerning at bigger font sizes*/
+letter-spacing: -1px;
+margin-bottom: 16px;
 }
 
 h2{
@@ -46,7 +59,8 @@ a {
 /* Becky McG logo image on left of header */
 #logo {
     width: 160px;
-    height: 104px;
+    /* commented out below when using logo2 instead of logo */
+    /* height: 104px;*/
     padding: 16px;
 }
 
@@ -69,8 +83,6 @@ a {
 
 .nav-list li a {
     flex: 0 1 200px ;
-    /* aquamarine bg is just a placeholder to test out flexbox */
-   /* background-color: aquamarine; */
     color:black;
     text-align: center;
     font-size: 40px;
@@ -110,40 +122,59 @@ i:active {
 }
 /* Hero image for the intro section */
 #hero{
-    background-color: var(--bg-grey);
-    background-image: url(images/about.jpg);
+    background: linear-gradient(to left, transparent, var(--primary-color) ), url(images/about.jpg);
     background-repeat: no-repeat;
     height: 600px;
     background-position-y: 25%;
     background-size: cover;
     padding: 24px;
     margin-bottom: 32px;
+
+    /* This is so unbelievably hacky! Shrinking down viewport shifts the h2 off screen to the left*/
+    /* Was having so many problems with the h2 extending the page width to the right and couldn't figure out how to fix it! */
+    display:flex;
+    flex-flow: column wrap-reverse;
+    justify-content: space-between;
 }
 
-/* could really do with using media queries to adjust the scaling of this */
+/* could really do with using media queries to hide and adjust sizes for different screen widths */
 #hero h1 {
     color:var(--secondary-color);
-    position: relative;
+    position:relative;
     top: 30%;
-    left: 25%;
     font-size: 10rem;
     letter-spacing: -1px;
     line-height:8rem;
-    margin-bottom:6rem;
-    margin-right: 24px;
+    margin-bottom:16px;
+    flex-wrap: 1 0 20px;
+    padding: 10px;
 }
 
 #hero h2 {
-    background-color:var(--secondary-color);
-    padding: 16px;
-    width:max-content;
+    flex-wrap: 1 0 0;
+    color: var(--bg-white);
+    padding: 0 16px;
+    height: max-content;
     position: relative;
-    top: 24px;
-    margin-top: 8rem;
+    margin-top: 24px;
     font-size: 3rem;
 }
 
 footer {
     background-color: var(--secondary-color);
     padding: 24px;
+}
+
+#about {
+    padding: 16px 42px;
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 24px;
+    max-width: 600px;
 }
