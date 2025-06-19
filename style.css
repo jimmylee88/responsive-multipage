@@ -15,10 +15,12 @@ body {
     /* had to include this as a weird 8px margin seems to be applied by default by browsers */
     margin: 0;
     padding: 16px;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 16px;
 }
 
 hr {
-    margin: 0;
+    margin: 0 0 24px 0;
     width:80px;
     align: left;
     border-width:4px;
@@ -29,11 +31,11 @@ hr {
 
 h1{
 font-family: var(--brand-font);
-font-size: 96px;
+font-size: 80px;
 color:var(--primary-color);
 /* negative letter spacing for tighter kerning at bigger font sizes*/
 letter-spacing: -1px;
-margin-bottom: 16px;
+margin: 0 16px 8px 0;
 }
 
 h2{
@@ -52,7 +54,11 @@ header {
 }
 
 a {
-    color: black;
+    color: var(--primary-color);
+}
+
+a:hover {
+    font-weight: bold;
 }
 
 /* Using flexbox for the header keeps the logo in line with the nav links*/
@@ -160,21 +166,109 @@ i:active {
     font-size: 3rem;
 }
 
-footer {
-    background-color: var(--secondary-color);
-    padding: 24px;
-}
-
 #about {
     padding: 16px 42px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+    align-content: center;
+    justify-content:space-between;
+}
+
+
+#about h1 p {
+    flex-wrap: 0 0 100px;
+}
+
+#about img {
+    flex: 0 0 100px;
+
+    border-radius: 200px;
+    max-width: 400px;
+    max-height: 400px;
+    border: 8px solid var(--secondary-color);
+    margin-bottom: 40px;
 }
 
 h3 {
     font-size: 32px;
     margin-bottom: 16px;
+    
 }
 
 p {
     font-size: 24px;
     max-width: 600px;
 }
+
+#work {
+    padding: 16px 42px;
+    margin-bottom: 40px;
+}
+
+#disciplines {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+article {
+    flex: 0 0 400px;
+    padding: 16px;
+    background-color: var(--bg-grey);
+    text-align: center;
+}
+
+article:hover {
+    scale: 1.05;
+}
+
+article:active{
+    scale: 0.95;
+    background-color: var(--primary-color);
+}
+
+article h2:hover{
+    text-decoration: underline;
+}
+
+article h2:active{
+    color: var(--bg-white);
+}
+
+article a{
+    text-decoration: none;
+}
+
+
+
+#clients {
+    padding: 16px 42px;
+    margin-bottom: 40px;
+}
+
+#testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#testimonials li{
+    flex: 1 1 360px;
+    padding: 16px;
+    list-style: none;
+}
+
+footer {
+    border-bottom: 16px solid var(--secondary-color);
+    padding: 24px;
+    text-align: center;
+    font-size: 20px;
+    color:var(--primary-color);
+}
+
+
