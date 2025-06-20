@@ -5,7 +5,7 @@
     --secondary-color: #fdf954;
     --bg-white: white;
     --bg-grey: #f2f5fa;
-    --text-color: #000000;
+    --text-color: #021e4d;
     --brand-font: "Bebas Neue";
 
 }
@@ -16,6 +16,7 @@ body {
     margin: 0 auto;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-size: 16px;
+    color: var(--text-color);
 }
 
 hr {
@@ -47,15 +48,31 @@ color:var(--text-color);
 
 h3 {
     font-size: 32px;
-    margin-bottom: 16px;   
+    margin-bottom: 16px;  
+    color: var(--text-color)
 }
 
 p {
     font-size: 24px;
     max-width: 470px;
+    color: var(--text-color)
 }
 
-/*  */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:active {
+    background-color: var(--bg-grey);
+    border-bottom: 2px solid var(--secondary-color);
+    text-decoration: none;
+}
+
+/* nav bar section at top */
 header {
     display: flex;
     flex-direction: row;
@@ -76,8 +93,6 @@ a:hover {
 /* Becky McG logo image on left of header */
 #logo {
     width: 160px;
-    /* commented out below when using logo2 instead of logo */
-    /* height: 104px;*/
     padding: 16px;
 }
 
@@ -111,21 +126,21 @@ a:hover {
 
 .nav-list li a:hover {
     color: var(--primary-color);
-    border-bottom: 4px solid #2F5BB6;
+    border-bottom: 4px solid var(--primary-color);
 }
 
 .nav-list li a:active {
     color: var(--primary-color);
-    background-color: var(--secondary-color);
-    border-bottom: 4px solid var(--primary-color);
+    background-color: var(--bg-grey);
+    border-bottom: 4px solid var(--secondary-color);
 }
 
-/* links & hover states */
-a:hover {
+/* links & hover states for top nav */
+li a:hover {
     color: var(--primary-color);
 }
 
-a:active {
+li a:active {
     color: var(--primary-color);
     background-color: var(--secondary-color);
 }
@@ -148,36 +163,34 @@ i:active {
     background-size: cover;
     padding: 24px;
     margin-bottom: 32px;
-
-    /* This is so unbelievably hacky! Shrinking down viewport shifts the h2 off screen to the left*/
-    /* Was having so many problems with the h2 extending the page width to the right and couldn't figure out how to fix it! */
-    display:flex;
-    flex-flow: column wrap-reverse;
-    justify-content: space-between;
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
 }
 
-/* could really do with using media queries to hide and adjust sizes for different screen widths */
-#hero h1 {
+#hero-title {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 600px;
+    flex: 1 1 200px;
+}
+
+#hero-title h1 {
     color:var(--secondary-color);
-    position:absolute;
-    top: 500px;
-    right: 30%;
     font-size: 10rem;
     letter-spacing: -1px;
     line-height:8rem;
-    margin-bottom:16px;
-    flex-wrap: 1 0 200px;
-    padding: 16px 16px;
+    text-align: left;
+    padding: 0px;
 }
 
-#hero h2 {
-    flex-wrap: 1 0 0;
+#hero-title h2 {
     color: var(--bg-white);
-    padding: 0 16px;
-    height: max-content;
-    position: relative;
-    margin-top: 24px;
+    margin-top: 8px;
     font-size: 3rem;
+    line-height: 3rem;
+    text-align: left;
+    padding: 0px;
 }
 
 #about {
@@ -265,6 +278,31 @@ blockquote {
     font-style:italic;
     font-weight: 300;
     margin: 16px 0;
+}
+
+#testimonials::before {
+content: '“';
+font-family: 'Bebas Neue';
+font-style: normal;
+position: absolute;
+left: 40px;
+color: var(--secondary-color);
+font-size: 240px;
+font-weight: 900;
+z-index: -1;
+vertical-align: text-top;
+}
+
+#testimonials::after {
+content: '”';
+font-family: 'Bebas Neue';
+font-style: normal;
+position:relative;
+right: 10px;
+color: var(--secondary-color);
+font-size: 240px;
+font-weight: 900;
+z-index: -1;
 }
 
 figcaption {
