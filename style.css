@@ -251,7 +251,7 @@ article a{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #testimonials li {
@@ -260,13 +260,14 @@ article a{
     list-style: none;
 }
 
-#testimonials p {
+blockquote {
     font-size: 24px;
     font-style:italic;
     font-weight: 300;
+    margin: 16px 0;
 }
 
-.credit {
+figcaption {
     color: var(--primary-color);
     font-style: normal;
     font-size: 16px;
