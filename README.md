@@ -1,7 +1,7 @@
 # Responsive Multi-page project — HTML & CSS week 2 challenge
 
 ### Github Pages link:
-url placeholder
+https://jimmylee88.github.io/responsive-multipage/ 
 
 ## Intro
 Our assignment this week is to develop upon some basic wireframes we created for a website idea. 
