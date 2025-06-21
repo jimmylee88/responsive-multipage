@@ -226,7 +226,7 @@ i:active {
     margin-top: 56px;
 }
 
-#disciplines, #message {
+#disciplines, #form {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -292,11 +292,11 @@ content: '“';
 font-family: 'Bebas Neue';
 font-style: normal;
 position: relative;
-left: 10px;
+left: -10px;
 color: var(--secondary-color);
 font-size: 240px;
 line-height: 10px;
-margin-top: 95px;
+margin-top: 100px;
 font-weight: 900;
 z-index: -1;
 
@@ -312,7 +312,7 @@ color: var(--secondary-color);
 font-size: 240px;
 line-height: 10px;
 font-weight: 900;
-margin-top: 95px;
+margin-top: 130px;
 z-index: -1;
 }
 
@@ -477,4 +477,11 @@ select {
 
 #contact-intro{
     margin-bottom: 100px;
+}
+
+#contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px 100px;
 }
