@@ -13,7 +13,7 @@
 body {
     background-color: var(--bg-white); 
     /* had to include this as a weird 8px margin seems to be applied by default by browsers */
-    margin: 0 auto;
+    margin: 0;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: var(--text-color);
@@ -80,6 +80,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-white);
+    box-shadow: 0 0 32px rgba(47, 91, 182, 0.25);;
 }
 
 a {
@@ -155,6 +156,12 @@ i:active {
     scale: 0.95;
 }
 
+/* constrain content to 1920px for wide screen sizes - better readability */
+#content {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
 /* Hero image for the intro section */
 #hero{
     background: linear-gradient(to left, transparent, var(--primary-color) ), url(images/about.jpg);
@@ -216,6 +223,7 @@ i:active {
 #work, #contact{
     padding: 16px 42px;
     margin-bottom: 40px;
+    margin-top: 56px;
 }
 
 #disciplines, #message {
