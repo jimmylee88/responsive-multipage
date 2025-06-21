@@ -61,6 +61,7 @@ p {
 
 a {
     color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
 }
 
 a:hover {
@@ -96,6 +97,7 @@ a:hover {
 #logo {
     width: 160px;
     padding: 16px;
+    transition: all 0.2s ease-in-out;
 }
 
 #logo:hover {
@@ -124,6 +126,7 @@ a:hover {
     text-transform: uppercase;
     font-family: "Bebas Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-list li a:hover {
@@ -133,7 +136,7 @@ a:hover {
 
 .nav-list li a:active {
     color: var(--primary-color);
-    background-color: var(--bg-grey);
+    background-color: var(--bg-white);
     border-bottom: 4px solid var(--secondary-color);
 }
 
@@ -238,6 +241,7 @@ article {
     padding: 16px;
     background-color: var(--bg-grey);
     text-align: center;
+    transition: all 0.2s ease-in-out;
 }
 
 article:hover {
@@ -247,10 +251,12 @@ article:hover {
 article:active{
     scale: 0.95;
     background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
 }
 
 article h2:hover{
     text-decoration: underline;
+    transition: all 0.2s ease-in-out;
 }
 
 article h2:active{
