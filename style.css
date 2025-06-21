@@ -210,11 +210,14 @@ i:active {
     flex-flow: row wrap;
     align-items: flex-start;
     align-content: center;
-    justify-content:space-evenly;
+    justify-content:center;
+    gap: 16px;
 }
 
-#about img{
-    max-width: 360px;
+#profilepic {
+    flex: 1 1 200px;
+    min-width: 310px;
+    max-width: 540px;
     max-height: 3600px;
     margin-bottom: 40px;
     border: 8px solid;
