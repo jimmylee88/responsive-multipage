@@ -202,7 +202,7 @@ i:active {
 }
 
 #about {
-    padding: 16px 42px;
+    padding: 16px 32px;
 }
 
 .profile {
@@ -215,10 +215,9 @@ i:active {
 }
 
 #profilepic {
-    flex: 1 1 200px;
-    min-width: 310px;
+    flex: 1 1 260px;
+    min-width: 320px;
     max-width: 540px;
-    max-height: 3600px;
     margin-bottom: 40px;
     border: 8px solid;
     /* experimental css for gradients in border - doesn't work on circle images through border radius */
@@ -227,7 +226,7 @@ i:active {
 }
 
 #work, #contact{
-    padding: 16px 42px;
+    padding: 16px 32px;
     margin-bottom: 40px;
     margin-top: 56px;
 }
@@ -240,7 +239,8 @@ i:active {
 }
 
 article {
-    flex: 0 0 400px;
+    flex: 1 1 320px;
+    min-width: 320px;
     padding: 16px;
     background-color: var(--bg-grey);
     text-align: center;
@@ -271,7 +271,7 @@ article a{
 }
 
 #clients {
-    padding: 16px 42px;
+    padding: 16px 0 0 32px;
     margin-bottom: 40px;
 }
 
@@ -279,21 +279,25 @@ article a{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0px
 }
 
 #testimonials li {
     flex: 1 1 360px;
-    padding: 16px 16px;
+    min-width: 300px;
+    padding: 16px 16px 0 0;
     list-style: none;
 }
 
 /* Changed client tesimonial section to use semantic html elements */
 blockquote {
-    font-size: 24px;
+    flex: 1 1 206px;
+    font-size: 20px;
     font-style:italic;
     font-weight: 300;
     margin: 16px 0;
+    padding: 0px;
 }
 
 #testimonials::before {
@@ -325,7 +329,7 @@ margin-top: 130px;
 z-index: -1;
 }
 
-figcaption {
+figcaption.credit {
     color: var(--primary-color);
     font-style: normal;
     font-size: 16px;
@@ -352,10 +356,22 @@ h1::selection, h2::selection {
     color: var(--primary-color)
 }
 
+#contact-intro{
+    margin-bottom: 100px;
+}
+
+#contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 0px 100px;
+}
+
 /* Styling for the form */
 form {
+    flex: 1 1 auto;
     text-align: left;
-    margin-left: 24px;
 }
 
 label {
@@ -454,7 +470,7 @@ label {
 
 textarea {
     resize: none;
-    width: 370px;
+    min-width: 300px;
     margin-top: 10px;
     padding: 8px;
     border: 2px solid var(--text-color);
@@ -462,14 +478,6 @@ textarea {
     background-color: var(--bg-grey);
     font-family: 'Montserrat',Arial, Helvetica, sans-serif;
     font-size: 16px;
-}
-
-select {
-    padding: 8px 8px;
-    margin: 20px 0 20px 0;
-    width: 200px;
-    border-width: 2px;
-    border-color: var(--primary-color);
 }
 
 /* Pseudo element for adding a red asterisk before the disclaimer text, using it like a key to explain*/
@@ -484,13 +492,3 @@ select {
     color:var(--primary-color);
 }
 
-#contact-intro{
-    margin-bottom: 100px;
-}
-
-#contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0px 100px;
-}
