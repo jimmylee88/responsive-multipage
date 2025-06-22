@@ -356,21 +356,8 @@ h1::selection, h2::selection {
     color: var(--primary-color)
 }
 
-#contact-intro{
-    margin-bottom: 100px;
-}
-
-#contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:flex-start;
-    gap: 0px 100px;
-}
-
 /* Styling for the form */
 form {
-    flex: 1 1 auto;
     text-align: left;
 }
 
@@ -492,3 +479,17 @@ textarea {
     color:var(--primary-color);
 }
 
+#contact-intro{
+    margin-bottom: 40px;
+}
+
+#contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px 56px;
+}
+
+#contact-container img {
+    align-self:self-start;
+}
