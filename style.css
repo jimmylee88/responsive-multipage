@@ -47,7 +47,7 @@ h2{
 font-family: var(--brand-font);
 font-size: 64px;
 font-weight: 500;
-color:var(--text-color);
+color:var(--secondary-color);
 }
 
 h3 {
@@ -249,15 +249,17 @@ article {
     background-color: var(--bg-grey);
     text-align: center;
     transition: all 0.2s ease-in-out;
+    align-content: center;
 }
 
 article:hover {
     scale: 1.05;
 }
 
-article:active{
+article:active {
     scale: 0.95;
     background-color: var(--primary-color);
+    box-shadow: var(--shadow);
     transition: all 0.2s ease-in-out;
 }
 
@@ -272,6 +274,21 @@ article h2:active{
 
 article a{
     text-decoration: none;
+}
+
+/* background images for each article card */
+#murals {
+    background: linear-gradient(to left, transparent, var(--text-color)), url(images/profile.webp);
+    background-repeat: no-repeat;
+    height: 320px;
+    background-size: cover;
+}
+
+#graphics {
+    background: linear-gradient(to right, transparent, var(--text-color)), url(images/graphics/ventile1.webp);
+    background-repeat: no-repeat;
+    height: 320px;
+    background-size: cover;
 }
 
 #clients {
