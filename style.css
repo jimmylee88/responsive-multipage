@@ -7,6 +7,7 @@
     --bg-grey: #f2f5fa;
     --text-color: #021e4d;
     --brand-font: "Bebas Neue";
+    --shadow: 0 0 32px rgba(47, 91, 182, 0.25);
 
 }
 
@@ -17,6 +18,8 @@ body {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: var(--text-color);
+    min-height: 100vh;
+    position: relative;
 }
 
 hr {
@@ -55,8 +58,9 @@ h3 {
 
 p {
     font-size: 24px;
+    line-height: 32px;
     max-width: 470px;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 a {
@@ -81,7 +85,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-white);
-    box-shadow: 0 0 32px rgba(47, 91, 182, 0.25);;
+    box-shadow: var(--shadow);
 }
 
 a {
@@ -216,7 +220,7 @@ i:active {
 
 #profilepic {
     flex: 1 1 260px;
-    min-width: 320px;
+    min-width: 300px;
     max-width: 540px;
     margin-bottom: 40px;
     border: 8px solid;
@@ -280,7 +284,8 @@ article a{
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 0px
+    padding: 16px;
+    margin-bottom: 96px;
 }
 
 #testimonials li {
@@ -295,10 +300,10 @@ article a{
 blockquote {
     flex: 1 1 206px;
     font-size: 20px;
+    line-height: 28px;
     font-style:italic;
     font-weight: 300;
     margin: 16px 0;
-    padding: 0px;
 }
 
 #testimonials::before {
@@ -342,10 +347,19 @@ footer {
     border-bottom: 8px solid;
     border-image-source: linear-gradient(to left, var(--primary-color) 5%,var(--secondary-color));
     border-image-slice: 1;
-    padding: 24px;
     text-align: center;
     color:var(--primary-color);
     background-color: var(--bg-white);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 50px;
+}
+/* hacky way to make sure footer stays at bottom of viewport */
+body::after {
+  content: '';
+  display: block;
+  height: 50px;
 }
 
 /* Some cheeky css to change default highlight colour when selecting text */
@@ -493,4 +507,38 @@ textarea {
 
 #contact-container img {
     align-self:self-start;
+}
+
+/* styling for image thumbnail links in murals & graphics pages - using figure as more semantic html tag*/
+
+figure {
+    flex: 1 1 350px;
+    min-width: 300px;
+    padding: 16px;
+    background-color: var(--bg-grey);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+figure:hover {
+    scale: 1.1;
+    box-shadow: var(--shadow);
+}
+/* A bit wonky, but putting this interaction in lieu of linking to individual project pages */
+figure:active{
+    scale: 2;
+    background-color: var(--bg-white);
+    transition: all 0.2s ease-in-out;
+}
+
+figcaption {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 8px;
+}
+
+figure img {
+    max-width: 100%;
+    max-height: 400px;    
 }
