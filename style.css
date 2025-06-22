@@ -210,8 +210,8 @@ i:active {
     flex-flow: row wrap;
     align-items: flex-start;
     align-content: center;
-    justify-content:center;
-    gap: 16px;
+    justify-content:space-around;
+    gap: 32px;
 }
 
 #profilepic {
@@ -279,13 +279,14 @@ article a{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0px
 }
 
 #testimonials li {
     flex: 1 1 360px;
     min-width: 300px;
+    max-width: 500px;
     padding: 16px 16px 0 0;
     list-style: none;
 }
