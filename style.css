@@ -207,6 +207,7 @@ i:active {
 
 #about {
     padding: 16px 32px;
+    margin-top: 80px;
 }
 
 .profile {
@@ -227,6 +228,10 @@ i:active {
     /* experimental css for gradients in border - doesn't work on circle images through border radius */
     border-image-source: linear-gradient(var(--primary-color),var(--secondary-color));
     border-image-slice: 1;
+}
+
+#clients {
+    margin-top: 80px;
 }
 
 #work, #contact{
